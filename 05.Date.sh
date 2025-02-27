@@ -1,3 +1,3 @@
 #!/bin/bash
-Date=$(Date)
-echo "Date and time is :$Date"
+Date=$(date)
+echo "Date and time is : $Date"
