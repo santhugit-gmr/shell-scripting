@@ -1,5 +1,6 @@
 #!/bin/bash
 ID=$(id -u)
+echo " Script-name : $0 "
 Validation ()
 {
 if [ $? -ne 0 ]
