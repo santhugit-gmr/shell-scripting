@@ -10,10 +10,10 @@ Validation ()
 {
 if [ $? -ne 0 ]
 then
-echo "Error: $2 : installation $R Failed $N"
+echo -e "Error: $2 : installation $R Failed $N"
 exit 1
 else
-echo " $2 : installation $G Success $N"
+echo -e " $2 : installation $G Success $N"
 fi
 }
 if [ $ID -ne 0 ]
