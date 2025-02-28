@@ -20,7 +20,7 @@ exit 1
 else
 echo "User is root user"
 fi
-yum install mysql -y >>$ LOGFILE
+yum install mysql -y >>$ $LOGFILE
 Validation $? "Installing My sql"
-yum install git -y >>$ LOGFILE
+yum install git -y >>$ $LOGFILE
 Validation $? "Installing My Git"
