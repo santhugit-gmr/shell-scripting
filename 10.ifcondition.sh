@@ -1,5 +1,5 @@
 #!/bin/bash
-echo ("enter a number")
+echo "enter a number"
 read Number
 if [ $Number -ge 100 ]
 then 
