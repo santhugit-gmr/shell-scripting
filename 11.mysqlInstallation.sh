@@ -9,7 +9,7 @@ echo "User is root user"
 fi
 yum install mysqll -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo "Error: SQL installation Failed"
 exit 1
