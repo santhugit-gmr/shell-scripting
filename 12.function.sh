@@ -1,6 +1,8 @@
 #!/bin/bash
 ID=$(id -u)
 echo " Script-name : $0 "
+TIMESTAMP=$(date +%F -%H -%M -%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 Validation ()
 {
 if [ $? -ne 0 ]
@@ -18,7 +20,7 @@ exit 1
 else
 echo "User is root user"
 fi
-yum install mysql -y
+yum install mysql -y >>$ LOGFILE
 Validation $? "Installing My sql"
-yum install git -y
+yum install git -y >>$ LOGFILE
 Validation $? "Installing My Git"
