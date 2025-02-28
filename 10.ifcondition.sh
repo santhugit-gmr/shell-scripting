@@ -1,5 +1,6 @@
 #!/bin/bash
-Number=$1
+echo ("enter a number")
+read number
 if [ $Number -ge 100 ]
 then 
 echo "$Number is greater than 100"
