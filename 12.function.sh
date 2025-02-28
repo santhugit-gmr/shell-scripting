@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u)
 echo " Script-name : $0 "
-TIMESTAMP=$(date +%F -%H -%M -%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 Validation ()
 {
