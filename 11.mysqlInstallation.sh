@@ -1,6 +1,6 @@
 #!/bin/bash
 ID=$(id -u)
-if [ $ID -gt 0]
+if [ $ID -gt 0 ]
 then
 echo "Error : Please run this as root user"
 else
