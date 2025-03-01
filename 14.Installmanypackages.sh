@@ -13,3 +13,6 @@ exit 1
 else
 echo -e "$G User is root user $N"
 fi
+
+echo "Number of arguements passed : $# "
+echo "All arguements passed : $@ "
