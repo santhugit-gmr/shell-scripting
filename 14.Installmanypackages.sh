@@ -3,6 +3,16 @@
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+Y="\e[33m"
+
+Validate()
+if [ $1 -ne 0 ]
+then 
+echo -e " Error : $2 $R Failed $N"
+else 
+echo -e " $2 Success $N"
+fi
+
 
 ID=$(id -u)
 
@@ -14,5 +24,19 @@ else
 echo -e "$G User is root user $N"
 fi
 
-echo "Number of arguements passed : $# "
-echo "All arguements passed : $@ "
+#echo "Number of arguements passed : $# "
+#echo "All arguements passed : $@ "
+
+for package in $@
+do 
+    yum list installed $package #It will check whether the package is installed or not
+    if [ $? -ne 0 ]
+    then 
+    yum install $package -y #If not installed , it will install the application
+    Validate $? "Installation of $package"
+    else
+    echo -e " It is already installed ...$R Skipping $N"
+    fi
+
+
+done
