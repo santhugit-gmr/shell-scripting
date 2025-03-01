@@ -10,7 +10,7 @@ if [ $1 -ne 0 ]
 then 
 echo -e " Error : $2 $R Failed $N"
 else 
-echo -e " $2 Success $N"
+echo -e " $G Success $N"
 fi
 
 
@@ -35,7 +35,7 @@ do
     yum install $package -y #If not installed , it will install the application
     Validate $? "Installation of $package"
     else
-    echo -e " It is already installed ...$R Skipping $N"
+    echo -e " It is already installed ...$Y Skipping $N"
     fi
 
 
