@@ -5,6 +5,9 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
 Validate()
 if [ $1 -ne 0 ]
 then 
@@ -29,10 +32,10 @@ fi
 
 for package in $@
 do 
-    yum list installed $package #It will check whether the package is installed or not
+    yum list installed $package &>> $LOGFILE #It will check whether the package is installed or not
     if [ $? -ne 0 ]
     then 
-    yum install $package -y #If not installed , it will install the application
+    yum install $package -y &>> $LOGFILE #If not installed , it will install the application
     Validate $? "Installation of $package"
     else
     echo -e " It is already installed ...$Y Skipping $N"
