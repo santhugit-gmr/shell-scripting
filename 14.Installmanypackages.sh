@@ -11,5 +11,5 @@ then
 echo -e " $R Error : Please run this as root user $N"
 exit 1
 else
-echo "$G User is root user $N"
+echo -e "$G User is root user $N"
 fi
